@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Do this ONLY when you already installed Docker
 printf "Uninstall docker-ce"
 yum remove docker-ce
 rm -rf /var/lib/docker
