@@ -12,3 +12,5 @@ mkdir -p $HOME/.kube
   sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
 kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
+
+kubectl taint nodes --all node-role.kubernetes.io/master- 
