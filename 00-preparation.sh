@@ -36,6 +36,7 @@ containerd config default | sudo tee /etc/containerd/config.toml
 sudo systemctl restart containerd
 
 # To use the systemd cgroup driver in /etc/containerd/config.toml with runc, set
+sudo sed -i 's/            SystemdCgroup = false/            SystemdCgroup = true/' /etc/containerd/config.toml
 vim /etc/containerd/config.toml 
 
 [plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runc]
