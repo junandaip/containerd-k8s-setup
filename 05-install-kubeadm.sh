@@ -1,5 +1,6 @@
 #!/bin/bash
 
+sed -i.bak '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
 swapoff -a
 
 cat <<EOF | sudo tee /etc/yum.repos.d/kubernetes.repo
