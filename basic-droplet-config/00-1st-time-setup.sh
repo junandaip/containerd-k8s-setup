@@ -20,4 +20,4 @@ timedatectl set-timezone Asia/Jakarta
 # Configure NTP server
 yum install ntp -y 
 systemctl start ntpd
-systemctl enable ntpd
+systemctl enable ntpd 
