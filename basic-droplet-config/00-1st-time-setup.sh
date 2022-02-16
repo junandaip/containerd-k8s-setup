@@ -1,9 +1,14 @@
 #!/bin/bash
 
+# Update
+sudo yum update -y
+sudo yum install kexec-tools nano vim-enhanced epel-release net-tools wget yum-utils -y
+
 # Add new user
-adduser demo
-passwd demo
-gpasswd -a demo wheel
+adduser user
+passwd userpass
+gpasswd -a user wheel
+echo "server        ALL=(ALL)       NOPASSWD: ALL" >> /etc/sudoers.d/server
 
 # Install Firewalld and setup basic network rules
 sudo yum install firewalld -y
