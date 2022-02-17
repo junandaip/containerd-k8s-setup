@@ -13,4 +13,5 @@ mkdir -p $HOME/.kube
 
 kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
 
-kubectl taint nodes --all node-role.kubernetes.io/master- 
+# For master as worker
+#kubectl taint nodes --all node-role.kubernetes.io/master- 
