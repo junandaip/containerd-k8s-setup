@@ -6,7 +6,7 @@ sudo yum install kexec-tools nano vim-enhanced epel-release net-tools wget yum-u
 
 # Add new user
 adduser user
-passwd userpass
+usermod --password $(echo user_pass | openssl passwd -1 -stdin) user
 gpasswd -a user wheel
 echo "server        ALL=(ALL)       NOPASSWD: ALL" >> /etc/sudoers.d/server
 
