@@ -38,4 +38,5 @@ cat << EOF >> /etc/hosts
 10.104.0.6 k8s-master-3 
 10.104.0.3 k8s-worker-1
 10.104.0.5 k8s-worker-2
+10.104.0.8 haproxy-lb
 EOF
