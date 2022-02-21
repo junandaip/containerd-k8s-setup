@@ -13,7 +13,7 @@ echo "server        ALL=(ALL)       NOPASSWD: ALL" >> /etc/sudoers.d/server
 # Install Firewalld and setup basic network rules
 sudo yum install firewalld -y
 sudo systemctl start firewalld
-sudo firewall-cmd --zone=public --change-interface=eth1
+sudo firewall-cmd --zone=public --change-interface=eth1 --permanent
 sudo firewall-cmd --permanent --add-service=ssh
 sudo firewall-cmd --permanent --add-service=http
 sudo firewall-cmd --permanent --add-service=https
